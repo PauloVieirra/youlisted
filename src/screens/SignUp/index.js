@@ -22,7 +22,7 @@ export default function SignUpPage(){
                             trackColor={{ false: '#767577', true: '#81b0ff' }}
                             style={styles.switch}
                         />
-                    </View>
+              </View>
             <TouchableOpacity onPress={handleGo}>
             <Text>SignUp Page</Text>
             </TouchableOpacity>        
