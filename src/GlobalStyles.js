@@ -68,6 +68,7 @@ const Globalstyles = StyleSheet.create({
         height:50,
         flexDirection:'row',
         justifyContent:'flex-end'
+
     },
     lineFree:{
         width:'100%',

@@ -14,17 +14,17 @@ const styles = StyleSheet.create({
     cont_top:{
         flex: 1,
         width:"100%",
-        height:"50%",
-        justifyContent:'flex-end',
-        alignItems:'center'
+        height:"30%",
+        justifyContent:'center',
+        alignItems:'center',
+        backgroundColor:"#dedede"
     },
     cont_bottom:{
         flex: 1,
         width:"100%",
-        height:"50%",
+        height:"70%",
         justifyContent:'space-around',
         alignItems:'center',
-        paddingTop:30
     },
     cont_input:{
         flexDirection:"row",
@@ -70,6 +70,17 @@ const styles = StyleSheet.create({
     cont_options:{
         width:"100%",
         height:'100%',
+    },
+    cont_switch:{
+        width:"100%",
+        height:50,
+        backgroundColor:"#000"
+    },
+    cont_base:{
+        width:"100%",
+        height:58,
+        alignItems:'center',
+        justifyContent:'center',
     }
 
 })

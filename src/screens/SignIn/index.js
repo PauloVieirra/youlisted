@@ -2,6 +2,7 @@ import React from "react";
 import { View, Text, TouchableOpacity, TextInput, Switch, SafeAreaView, ScrollView, KeyboardAvoidingView, Platform } from "react-native";
 import { useStyle } from "../../../services/StyleContext";
 import { useNavigation } from "@react-navigation/native";
+import Top from "../../Components/AuthComponents";
 import Globalstyles from "../../GlobalStyles";
 import styles from "./style";
 
@@ -18,17 +19,9 @@ export default function SignInPage(){
             behavior={Platform.OS === "ios" ? "padding" : "height"}
             style={{ flex: 1 }}
         >
-            <SafeAreaView style={Globalstyles.safearea}>
+            
                 <View style={[styles.container, isDarkMode && Globalstyles.container]}>
-                    <View style={Globalstyles.line}>
-                        <Switch
-                            value={isDarkMode}
-                            onValueChange={toggleDarkMode}
-                            thumbColor={isDarkMode ? '#f4f3f4' : '#f4f3f4'}
-                            trackColor={{ false: '#767577', true: '#81b0ff' }}
-                            style={styles.switch}
-                        />
-                    </View>
+                  <Top/>
                     <View style={styles.cont_top}>
                         <View style={styles.cont_input}>
                             <TextInput
@@ -58,7 +51,7 @@ export default function SignInPage(){
                         </ScrollView>
                     </View>
                 </View>
-            </SafeAreaView>
+        
         </KeyboardAvoidingView>
     );
 }

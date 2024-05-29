@@ -1,21 +1,24 @@
-import React from "react";
-import { View, Text, TouchableOpacity, StyleSheet } from "react-native";
+import React, {useContext} from 'react';
+import { ScrollView, StyleSheet, Text } from 'react-native';
+import { useGameContext } from '../../../services/Context';
+import Lista from '../../../data/Lista';
 
-export default function HomePage(){
-    return(
-        <View style={styles.container}>
-            <Text>Home Page</Text>
-        </View>
-    );
-}
+const HomePage = () => {
+    const placar = { scoreA, scoreB } = useGameContext(useContext);
+  return (
+    <ScrollView>
+   <Lista/>
+   <Text> Placar:{placar.scoreA}</Text>
+   </ScrollView>
+
+  );
+};
 
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        width:"100%",
-        height:"100%",
-        justifyContent:"center",
-        alignItems:'center'
-    }
+  container: {
+    flex: 1,
+    padding: 10,
+  },
+});
 
-})
+export default HomePage;
